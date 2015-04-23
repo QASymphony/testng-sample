@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="11" total="35" passed="24">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TS-7 April-07-2014" duration-ms="45499" started-at="2015-04-22T15:13:44Z" finished-at="2015-04-22T15:14:29Z">
+    <groups>
+    </groups>
+    <test name="testOpenBrowserOnChrome" duration-ms="45047" started-at="2015-04-22T15:13:44Z" finished-at="2015-04-22T15:14:29Z">
+      <class name="sample.OpenBrowser">
+        <test-method status="PASS" signature="testURLs(java.lang.String)[pri:0, instance:sample.OpenBrowser@4aa6c8ad]" name="testURLs" duration-ms="45000" started-at="2015-04-22T15:13:44Z" finished-at="2015-04-22T15:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CH]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testURLs -->
+      </class> <!-- sample.OpenBrowser -->
+    </test> <!-- testOpenBrowserOnChrome -->
+    <test name="testCaculate" duration-ms="62" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+      <class name="sample.CalculatorTestSuccessful">
+        <test-method status="PASS" signature="testDivisionException()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="testDivisionException" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.Exception">
+            <message>
+              <![CDATA[Divider can't be zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Exception: Divider can't be zero
+	at utils.Calculator.divison(Calculator.java:28)
+	at sample.CalculatorTestSuccessful.testDivisionException(CalculatorTestSuccessful.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Exception -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivisionException -->
+        <test-method status="PASS" signature="beforeEachTest()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="beforeEachTest" is-config="true" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTest -->
+        <test-method status="PASS" signature="initCalculator()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="initCalculator" is-config="true" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initCalculator -->
+        <test-method status="PASS" signature="testDivison()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="testDivison" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivison -->
+        <test-method status="FAIL" signature="testSubstraction()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="testSubstraction" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at sample.CalculatorTestSuccessful.testSubstraction(CalculatorTestSuccessful.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubstraction -->
+        <test-method status="FAIL" signature="testSum()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="testSum" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [12] but found [7]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [12] but found [7]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at sample.CalculatorTestSuccessful.testSum(CalculatorTestSuccessful.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSum -->
+        <test-method status="PASS" signature="afterEachTest()[pri:0, instance:sample.CalculatorTestSuccessful@289f6ae]" name="afterEachTest" is-config="true" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTest -->
+      </class> <!-- sample.CalculatorTestSuccessful -->
+    </test> <!-- testCaculate -->
+    <test name="testMessagePrintout" duration-ms="280" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+      <class name="sample.WelcomeMessageTest">
+        <test-method status="PASS" signature="testBeforeClass()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testBeforeClass" is-config="true" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBeforeClass -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_001()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_001" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_001 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_002()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_002" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_002(WelcomeMessageTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_002 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_003()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_003" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_003 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_004()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_004" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_004(WelcomeMessageTest.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_004 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_006()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_006" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_006(WelcomeMessageTest.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_006 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_005()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_005" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_005 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_007()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_007" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_007 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_009()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_009" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_009 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_008()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_008" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_008(WelcomeMessageTest.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_008 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_010()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_010" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_010(WelcomeMessageTest.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_010 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_012()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_012" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_012(WelcomeMessageTest.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_012 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_011()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_011" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_011 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_014()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_014" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_014 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_013()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_013" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_013(WelcomeMessageTest.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_013 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_015()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_015" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_015 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_016()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_016" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_016 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_017()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_017" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_017(WelcomeMessageTest.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_017 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_018()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_018" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_018 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_019()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_019" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_019 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_021()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_021" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_021 -->
+        <test-method status="FAIL" signature="testWelcomeMessagePage_020()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_020" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_020(WelcomeMessageTest.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.TestNG.privateMain(TestNG.java:1364)
+	at org.testng.TestNG.main(TestNG.java:1333)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_020 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_022()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_022" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_022 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_024()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_024" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_024 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_023()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_023" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_023 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_025()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_025" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_025 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_026()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_026" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_026 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_028()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_028" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_028 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_027()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_027" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_027 -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_029()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_029" duration-ms="15" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_029 -->
+        <test-method status="PASS" signature="testAfterClass()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testAfterClass" is-config="true" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAfterClass -->
+        <test-method status="PASS" signature="testWelcomeMessagePage_030()[pri:0, instance:sample.WelcomeMessageTest@5883914b]" name="testWelcomeMessagePage_030" duration-ms="0" started-at="2015-04-22T15:14:29Z" finished-at="2015-04-22T15:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testWelcomeMessagePage_030 -->
+      </class> <!-- sample.WelcomeMessageTest -->
+    </test> <!-- testMessagePrintout -->
+  </suite> <!-- TS-7 April-07-2014 -->
+</testng-results>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite name="TS-7 April-07-2014">
+    <test name="testOpenBrowserOnChrome">
+        <parameter name="browserName" value="CH" />
+        <classes>
+            <class name="sample.OpenBrowser" />
+        </classes>
+    </test>
+    <test name="testCaculate">
+        <classes>
+            <class name="sample.CalculatorTestSuccessful" />
+        </classes>
+    </test>
+    <test name="testMessagePrintout">
+        <classes>
+            <class name="sample.WelcomeMessageTest" />
+        </classes>
+    </test>
+</suite>

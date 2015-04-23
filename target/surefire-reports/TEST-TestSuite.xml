@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="39.762" tests="35" errors="0" skipped="0" failures="11">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin"/>
+    <property name="java.vm.version" value="23.25-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\qTestAutomation\SampleDemo\TestNG_Sample\OpenURL"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 2"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\qTestAutomation\SampleDemo\TestNG_Sample\OpenURL"/>
+    <property name="java.runtime.version" value="1.7.0_25-b17"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="maven.test.additionalClasspath" value="C:\qTestAutomation\qtest-automation-1.0.0\lib\testng-plugin-log-collector.jar"/>
+    <property name="os.name" value="Windows Server 2008"/>
+    <property name="classworlds.conf" value="C:\qTestAutomation\Software\apache-maven-3.3.1\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Amazon\cfn-bootstrap\;%JAVA_HOME%\bin;%ANT_HOME%\bin;%M2_HOME%\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.0"/>
+    <property name="user.home" value="C:\"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="WIN-28WDQBWIDT4$"/>
+    <property name="java.class.path" value="C:\qTestAutomation\Software\apache-maven-3.3.1\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_25\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml -fn -Dmaven.test.additionalClasspath=C:\qTestAutomation\qtest-automation-1.0.0\lib\testng-plugin-log-collector.jar test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_25"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_25\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\qTestAutomation\Software\apache-maven-3.3.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testURLs" classname="sample.OpenBrowser" time="39.621"/>
+  <testcase name="testDivisionException" classname="sample.CalculatorTestSuccessful" time="0"/>
+  <testcase name="testDivison" classname="sample.CalculatorTestSuccessful" time="0"/>
+  <testcase name="testSubstraction" classname="sample.CalculatorTestSuccessful" time="0">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at sample.CalculatorTestSuccessful.testSubstraction(CalculatorTestSuccessful.java:73)
+</failure>
+  </testcase>
+  <testcase name="testSum" classname="sample.CalculatorTestSuccessful" time="0">
+    <failure message="expected [12] but found [7]" type="java.lang.AssertionError">java.lang.AssertionError: expected [12] but found [7]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at sample.CalculatorTestSuccessful.testSum(CalculatorTestSuccessful.java:38)
+</failure>
+    <system-out><![CDATA[----- START OF Verify function testSum in CalculatorTestSuccessful class -------------
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_001" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_002" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_002(WelcomeMessageTest.java:45)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_002 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_002 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_003" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_004" classname="sample.WelcomeMessageTest" time="0.016">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_004(WelcomeMessageTest.java:68)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_004 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_004 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_005" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_006" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_006(WelcomeMessageTest.java:91)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_006 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_006 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_007" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_008" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_008(WelcomeMessageTest.java:114)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_008 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_008 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_009" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_010" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_010(WelcomeMessageTest.java:137)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_010 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_010 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_011" classname="sample.WelcomeMessageTest" time="0.015"/>
+  <testcase name="testWelcomeMessagePage_012" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_012(WelcomeMessageTest.java:160)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_012 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_012 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_013" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_013(WelcomeMessageTest.java:172)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_013 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_013 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_014" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_015" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_016" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_017" classname="sample.WelcomeMessageTest" time="0.016">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_017(WelcomeMessageTest.java:217)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_017 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_017 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_018" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_019" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_020" classname="sample.WelcomeMessageTest" time="0">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:286)
+	at org.testng.Assert.assertEquals(Assert.java:296)
+	at sample.WelcomeMessageTest.testWelcomeMessagePage_020(WelcomeMessageTest.java:251)
+</failure>
+    <system-out><![CDATA[------------------------------------------
+----testWelcomeMessagePage_020 -----------
+------------------------------------------
++++ Message from METHOD: testWelcomeMessagePage_020 +++
+]]></system-out>
+  </testcase>
+  <testcase name="testWelcomeMessagePage_021" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_022" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_023" classname="sample.WelcomeMessageTest" time="0.016"/>
+  <testcase name="testWelcomeMessagePage_024" classname="sample.WelcomeMessageTest" time="0.031"/>
+  <testcase name="testWelcomeMessagePage_025" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_026" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_027" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_028" classname="sample.WelcomeMessageTest" time="0"/>
+  <testcase name="testWelcomeMessagePage_029" classname="sample.WelcomeMessageTest" time="0.015"/>
+  <testcase name="testWelcomeMessagePage_030" classname="sample.WelcomeMessageTest" time="0.032"/>
+</testsuite>

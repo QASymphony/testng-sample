@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE project []>
+
+<project name="WebTestProject" default="all" basedir=".">
+
+    <!-- ========== Initialize Properties =================================== -->
+    <property name="xml.file" value="testNgSuite.xml" />
+
+    <property environment="env"/>
+
+    <property name="ws.home" value="${basedir}"/>
+    <property name="test.dest" value="${ws.home}/target"/>
+    <property name="test.src" value="${ws.home}/src/test/java"/>
+
+
+    <!-- ====== For setting the classpath ====  -->
+    <target name="setClassPath" unless="test.classpath">
+        <path id="classpath_jars">
+            <fileset dir="${ws.home}/resources/libs" includes="*.jar"/>
+            <fileset dir="${ws.home}/target" includes="*.jar"/>
+        </path>
+        <pathconvert pathsep=":" property="test.classpath" refid="classpath_jars"/>
+    </target>
+
+    <!-- ============ Initializing other stuff ===========  -->
+    <target name="init" depends="setClassPath">
+        <taskdef name="testng" classpath="${ws.home}/resources/libs/testng-6.8.7.jar" classname="org.testng.TestNGAntTask" />
+    </target>
+
+    <!-- cleaning the destination folders -->
+    <target name="clean">
+        <!-- delete dir="${test.dest}/**"/ -->
+    </target>
+
+    <!-- target for compiling the java files -->
+    <target name="compile" depends="init, clean" >
+        <echo message="making directory..."/>
+        <mkdir dir="${test.dest}"/>
+        <mkdir dir="${test.dest}/test-classes"/>
+
+        <echo message="compiling..."/>
+        <!-- CruiseControl seems to have problems picking up a Windows environment -->
+        <!-- variable to say where the javac compiler is, -->
+        <!-- so if we set fork="yes" then we can specify the location with -->
+        <!-- the executable parameter. -->
+        <javac srcdir="${test.src}" destdir="${test.dest}/test-classes" fork="yes" target="1.7" includeantruntime="false">
+            <classpath>
+                <fileset dir="${ws.home}/resources/libs" includes="testng-6.8.7.jar"/>
+                <fileset dir="${ws.home}/target" includes="*.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- run -->
+    <target name="all" depends="compile">
+        <testng classpath="${test.classpath}:${test.dest}" suitename="InitialTestSuite">
+            <xmlfileset dir="${ws.home}" includes="${xml.file}"/>
+        </testng>
+    </target>
+
+    <!--  ========== Generating reports using XSLT utility ==============    -->
+    <target name="testng-xslt-report">
+        <delete dir="${basedir}/testng-xslt">
+        </delete>
+        <mkdir dir="${basedir}/testng-xslt">
+        </mkdir>
+        <echo message="Generating XSLT report..."/>
+        <xslt in="${basedir}/target/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
+            <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+            <param expression="true" name="testNgXslt.sortTestCaseLinks" />
+            <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+            <param expression="true" name="testNgXslt.showRuntimeTotals" />
+            <classpath refid="classpath_jars">
+            </classpath>
+        </xslt>
+        <echo message="XSLT report generated"/>
+    </target>
+
+</project>

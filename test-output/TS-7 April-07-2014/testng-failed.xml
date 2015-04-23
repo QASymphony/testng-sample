@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TS-7 April-07-2014]">
+  <parameter name="browserName" value="CH"/>
+  <test name="testCaculate(failed)">
+    <classes>
+      <class name="sample.WelcomeMessageTest">
+        <methods>
+          <include name="testBeforeClass"/>
+          <include name="testAfterClass"/>
+        </methods>
+      </class> <!-- sample.WelcomeMessageTest -->
+      <class name="sample.CalculatorTestSuccessful">
+        <methods>
+          <include name="testSubstraction"/>
+          <include name="beforeEachTest"/>
+          <include name="initCalculator"/>
+          <include name="testSum"/>
+          <include name="afterEachTest"/>
+        </methods>
+      </class> <!-- sample.CalculatorTestSuccessful -->
+    </classes>
+  </test> <!-- testCaculate(failed) -->
+  <test name="testMessagePrintout(failed)">
+    <classes>
+      <class name="sample.CalculatorTestSuccessful">
+        <methods>
+          <include name="beforeEachTest"/>
+          <include name="initCalculator"/>
+          <include name="afterEachTest"/>
+        </methods>
+      </class> <!-- sample.CalculatorTestSuccessful -->
+      <class name="sample.WelcomeMessageTest">
+        <methods>
+          <include name="testBeforeClass"/>
+          <include name="testWelcomeMessagePage_010"/>
+          <include name="testAfterClass"/>
+          <include name="testWelcomeMessagePage_012"/>
+          <include name="testWelcomeMessagePage_006"/>
+          <include name="testWelcomeMessagePage_020"/>
+          <include name="testWelcomeMessagePage_017"/>
+          <include name="testWelcomeMessagePage_008"/>
+          <include name="testWelcomeMessagePage_002"/>
+          <include name="testWelcomeMessagePage_013"/>
+          <include name="testWelcomeMessagePage_004"/>
+        </methods>
+      </class> <!-- sample.WelcomeMessageTest -->
+    </classes>
+  </test> <!-- testMessagePrintout(failed) -->
+</suite> <!-- Failed suite [TS-7 April-07-2014] -->
