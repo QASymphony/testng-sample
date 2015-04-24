@@ -1,79 +1,72 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE project []>
 
-<project name="WebTestProject" default="all" basedir=".">
+<project name="OpenURL" default="all" basedir=".">
+    <!-- ======================================================================= -->
+    <!-- ========== Select xml file to be run =================================== -->
+    <!-- ======================================================================= -->
+    <property name="testng.xml.file" value="testNgSuite.xml" />
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
+    <!-- ======================================================================= -->
 
-    <!-- ========== Initialize Properties =================================== -->
-    <property name="xml.file" value="testNgSuite.xml" />
-
-    <property environment="env"/>
-
-    <property name="ws.home" value="${basedir}"/>
-    <property name="test.dest" value="${ws.home}/target"/>
-    <property name="test.src" value="${ws.home}/src/test/java"/>
-
+    <property name="test.dest" value="${basedir}/target"/>
+    <property name="jars" value="resources/libs"/>
+    <property name="version" value="1.0" />
+    <!-- cleaning the destination folders -->
+    <target name="clean">
+        <delete dir="${test.dest}"/>
+    </target>
 
     <!-- ====== For setting the classpath ====  -->
-    <target name="setClassPath" unless="test.classpath">
-        <path id="classpath_jars">
-            <fileset dir="${ws.home}/resources/libs" includes="*.jar"/>
-            <fileset dir="${ws.home}/target" includes="*.jar"/>
+    <target name="classpath">
+        <path id="classpath">
+            <fileset dir="${jars}">
+                <include name="**/*.jar"/>
+            </fileset>
+            <pathelement location="target/classes"/>
+            <pathelement location="target/test-classes"/>
+            <pathelement location="src/test/resources"/>
         </path>
-        <pathconvert pathsep=":" property="test.classpath" refid="classpath_jars"/>
     </target>
 
     <!-- ============ Initializing other stuff ===========  -->
-    <target name="init" depends="setClassPath">
-        <taskdef name="testng" classpath="${ws.home}/resources/libs/testng-6.8.7.jar" classname="org.testng.TestNGAntTask" />
+    <target name="init" depends="classpath">
+        <taskdef name="testng" classpath="${jars}/testng-6.8.7.jar" classname="org.testng.TestNGAntTask" />
     </target>
 
-    <!-- cleaning the destination folders -->
-    <target name="clean">
-        <!-- delete dir="${test.dest}/**"/ -->
-    </target>
-
-    <!-- target for compiling the java files -->
-    <target name="compile" depends="init, clean" >
-        <echo message="making directory..."/>
+    <!-- ============ Compile ===========  -->
+    <target name="compile" depends="init,clean,classpath">
         <mkdir dir="${test.dest}"/>
+        <mkdir dir="${test.dest}/classes"/>
+        <javac srcdir="src/main/java" destdir="${test.dest}/classes" classpathref="classpath" includeantruntime="false"/>
+    </target>
+
+    <!-- ============ Compile test  ===========  -->
+    <target name="compile-test" depends="compile">
         <mkdir dir="${test.dest}/test-classes"/>
-
-        <echo message="compiling..."/>
-        <!-- CruiseControl seems to have problems picking up a Windows environment -->
-        <!-- variable to say where the javac compiler is, -->
-        <!-- so if we set fork="yes" then we can specify the location with -->
-        <!-- the executable parameter. -->
-        <javac srcdir="${test.src}" destdir="${test.dest}/test-classes" fork="yes" target="1.7" includeantruntime="false">
-            <classpath>
-                <fileset dir="${ws.home}/resources/libs" includes="testng-6.8.7.jar"/>
-                <fileset dir="${ws.home}/target" includes="*.jar"/>
-            </classpath>
-        </javac>
+        <javac srcdir="src/test/java" destdir="${test.dest}/test-classes" classpathref="classpath" includeantruntime="false"/>
     </target>
 
-    <!-- run -->
-    <target name="all" depends="compile">
-        <testng classpath="${test.classpath}:${test.dest}" suitename="InitialTestSuite">
-            <xmlfileset dir="${ws.home}" includes="${xml.file}"/>
+    <!-- ============ Package jar file  ===========  -->
+    <target name="jar" depends="compile,compile-test">
+        <mkdir dir="${test.dest}"/>
+        <jar destfile="${test.dest}/${ant.project.name} ${version}.jar" basedir="${test.dest}/classes" />
+    </target>
+
+    <!-- ============ Run  ===========  -->
+    <target name="all" depends="jar">
+        <!-- Assume test.path contains the project library dependencies -->
+        <testng classpathref="classpath"
+                outputDir="${test.dest}/testng-reports"
+                haltOnFailure="false">
+
+            <!-- Extra project classpath, which is not included in above "test.path" -->
+            <!-- Tell Ant where is the project and test classes -->
+            <classpath location="${test.dest}/classess" />
+            <classpath location="${test.dest}/test-classes" />
+            <xmlfileset dir="${basedir}" includes="${testng.xml.file}"/>
         </testng>
-    </target>
-
-    <!--  ========== Generating reports using XSLT utility ==============    -->
-    <target name="testng-xslt-report">
-        <delete dir="${basedir}/testng-xslt">
-        </delete>
-        <mkdir dir="${basedir}/testng-xslt">
-        </mkdir>
-        <echo message="Generating XSLT report..."/>
-        <xslt in="${basedir}/target/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
-            <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
-            <param expression="true" name="testNgXslt.sortTestCaseLinks" />
-            <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
-            <param expression="true" name="testNgXslt.showRuntimeTotals" />
-            <classpath refid="classpath_jars">
-            </classpath>
-        </xslt>
-        <echo message="XSLT report generated"/>
     </target>
 
 </project>
