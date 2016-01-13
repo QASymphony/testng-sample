@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <suite name="TS-7 April-07-2014">
+    <test name="testFactory">
+        <classes>
+            <class name="sample.FactoryTest" />
+        </classes>
+    </test>
+    <test name="testDataProvider">
+        <classes>
+            <class name="sample.DataProviderTest" />
+        </classes>
+    </test>
     <test name="testOpenBrowserOnChrome">
         <parameter name="browserName" value="CH" />
         <classes>

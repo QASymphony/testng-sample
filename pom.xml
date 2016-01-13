@@ -17,12 +17,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.8.7</version>
-        </dependency>
-        <dependency>
-            <groupId>velocity</groupId>
-            <artifactId>velocity-dep</artifactId>
-            <version>1.4</version>
+            <version>6.9.8</version>
         </dependency>
         <dependency>
             <groupId>com.google.inject</groupId>
@@ -88,6 +83,31 @@
             <artifactId>jxl</artifactId>
             <version>2.6.12</version>
         </dependency>
+
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity-dep</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.qas.qtest.api</groupId>-->
+            <!--<artifactId>qtest-sdk-java</artifactId>-->
+            <!--<version>1.1.0</version>-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/resources/libs/qtest-sdk-java-1.1.0.jar</systemPath>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.qas.qtest.agent</groupId>-->
+            <!--<artifactId>qtest-testng-agent</artifactId>-->
+            <!--<version>1.0.0</version>-->
+            <!--<scope>system</scope>-->
+            <!--<systemPath>${project.basedir}/resources/libs/qtest-testng-agent-1.0.0.jar</systemPath>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -95,10 +115,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.16</version>
+                <version>2.19.1</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>10</threadCount>
+                    <!--<parallel>classes</parallel>-->
+                    <!--<threadCount>10</threadCount>-->
+                    <!--<useUnlimitedThreads>true</useUnlimitedThreads>-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
@@ -109,11 +130,7 @@
                         </property>
                         <property>
                             <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value> <!--  -->
-                        </property>
-                        <property>
-                            <name>reporter</name>
-                            <value>listenReport.Reporter</value>
+                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value> <!-- ,com.qas.qtest.agent.testng.listener.TestCaseListener -->
                         </property>
                     </properties>
                     <testFailureIgnore>true</testFailureIgnore>
