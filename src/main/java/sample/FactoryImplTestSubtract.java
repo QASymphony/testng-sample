@@ -29,7 +29,7 @@ public class FactoryImplTestSubtract {
     }
 
     @Test
-    public final void testAdd() {
+    public final void testSubtract() {
         Assert.assertEquals(calculator.subtraction(op1, op2), expResult);
     }
 }
