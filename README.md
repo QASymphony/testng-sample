@@ -1,5 +1,5 @@
 # testng-sample
-This is the simplest possible setup for qTest-TestNG sample for Java
+This is the simplest sample to setup qTest Automation Integration with TestNG for Java
 ### testng-sample Demo 
 
 This package includes sample java code integrate with TestNG testing framework.
