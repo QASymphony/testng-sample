@@ -54,10 +54,10 @@
         <jar destfile="${test.dest}/${ant.project.name} ${version}.jar" basedir="${test.dest}/classes" />
     </target>
 
-    <!-- ============ Run  ===========  -->
+    <!-- ============ Run  ===========  useDefaultListeners="false" listeners="com.qas.qtest.agent.testng.listener.TestCaseListener" -->
     <target name="all" depends="jar">
         <!-- Assume test.path contains the project library dependencies -->
-        <testng classpathref="classpath"
+        <testng classpathref="classpath" 
                 outputDir="${test.dest}/testng-reports"
                 haltOnFailure="false">
 
