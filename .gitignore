@@ -1,1 +1,4 @@
 target/
+gauge/reports
+gauge/logs
+gauge/.gauge
