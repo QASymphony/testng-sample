@@ -1,0 +1,72 @@
+23:54:54.166 # Specification Heading
+23:54:54.167 ## Vowel counts in single word
+23:54:54.170 * Vowels in English language are "aeiou".
+
+23:54:54.173 * The word "gauge" has "3" vowels.
+
+23:54:54.175 ## Vowel counts in multiple word
+23:54:54.176 * Vowels in English language are "aeiou".
+
+23:54:54.177 * Almost all words have vowels 
+
+     |Word  |Vowel Count|
+     |------|-----------|
+     |Gauge |3          |
+     |Mingle|2          |
+     |Snap  |1          |
+     |GoCD  |1          |
+     |Rhythm|0          |
+23:54:54.279 Checking updates...
+23:54:54.286 Plugin [Html Report] with pid [4231] has exited
+23:54:54.387 Specifications:	1 executed	1 passed	0 failed	0 skipped
+23:54:54.387 Scenarios:	2 executed	2 passed	0 failed	0 skipped
+23:54:54.387 
+Total time taken: 46ms
+23:55:02.802 # Specification Heading
+23:55:02.803 ## Vowel counts in single word
+23:55:02.806 * Vowels in English language are "aeiou".
+
+23:55:02.809 * The word "gauge" has "3" vowels.
+
+23:55:02.812 ## Vowel counts in multiple word
+23:55:02.813 * Vowels in English language are "aeiou".
+
+23:55:02.815 * Almost all words have vowels 
+
+     |Word  |Vowel Count|
+     |------|-----------|
+     |Gauge |3          |
+     |Mingle|2          |
+     |Snap  |1          |
+     |GoCD  |1          |
+     |Rhythm|0          |
+23:55:02.921 Plugin [Html Report] with pid [4264] has exited
+23:55:02.929 Checking updates...
+23:55:03.025 Specifications:	1 executed	1 passed	0 failed	0 skipped
+23:55:03.025 Scenarios:	2 executed	2 passed	0 failed	0 skipped
+23:55:03.025 
+Total time taken: 30ms
+23:55:06.216 # Specification Heading
+23:55:06.218 ## Vowel counts in single word
+23:55:06.221 * Vowels in English language are "aeiou".
+
+23:55:06.225 * The word "gauge" has "3" vowels.
+
+23:55:06.228 ## Vowel counts in multiple word
+23:55:06.229 * Vowels in English language are "aeiou".
+
+23:55:06.230 * Almost all words have vowels 
+
+     |Word  |Vowel Count|
+     |------|-----------|
+     |Gauge |3          |
+     |Mingle|2          |
+     |Snap  |1          |
+     |GoCD  |1          |
+     |Rhythm|0          |
+23:55:06.324 Checking updates...
+23:55:06.337 Plugin [Html Report] with pid [4278] has exited
+23:55:06.437 Specifications:	1 executed	1 passed	0 failed	0 skipped
+23:55:06.437 Scenarios:	2 executed	2 passed	0 failed	0 skipped
+23:55:06.437 
+Total time taken: 30ms
