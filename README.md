@@ -1,18 +1,10 @@
 # testng-sample
-This is the simplest sample to setup qTest Automation Integration with TestNG
-### testng-sample Demo 
+This project is to demonstrate how to create TestNG for Java agent in [qTest Automation Host](https://support.qasymphony.com/hc/en-us/sections/115001595246-qTest-Automation-Host-2-0-User-Guide). It includes sample java code built with TestNG framework. 
 
-This package includes sample java code integrate with TestNG testing framework.
+You can compile this source code with Maven or Ant.
 
-This package can be compiled with Maven / Ant
-
-TestNG Sample demo integrate with qTest Automation Host
-
-### How to use sample package to integrate with qTest Automation Host
-1. First, setup qTest Automation Host. And install TestNG for Java framework in qTest Automation Host.
-2. Download TestNG sample package and unzip in your directory (eg: D:\Demo\testng-sample).
-3. Open command line at directory D:\Demo\testng-sample and execute command: mvn clean compile package test
-4. Set up new agent with configure Agent below:
-
-### Agent Configuration
-![Agent Configuration](/documentation/agent-configuration.png?raw=true)
+### How to integrate this project with qTest Automation Host
+1. Download this TestNG project and unzip in your directory (eg: D:\Demo\testng-sample).
+2. Open command line on Windows or Termincal on Linux/Mac. Go to directory D:\Demo\testng-sample and execute command: mvn clean compile package test
+3. Set up new agent  Agent below:
+4. [Download and install qTest Automation Host](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Agent-Host). Then follow [this article](https://support.qasymphony.com/hc/en-us/articles/115005562026-Create-TestNG-for-Java-Agent) to create a TestNG for Java agent.
