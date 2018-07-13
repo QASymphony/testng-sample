@@ -20,7 +20,7 @@
             <class name="sample.WelcomeMessageTest" />
         </classes>
     </test>
-    <test name="TestClass">
+    <test name="TestClass">        
         <classes>
             <class name="sample.TestClass" />
         </classes>
