@@ -26,4 +26,9 @@
             <class name="sample.WelcomeMessageTest" />
         </classes>
     </test>
+    <test name="testClass">
+        <classes>
+            <class name="sample.TestClass" />
+        </classes>
+    </test>
 </suite>
