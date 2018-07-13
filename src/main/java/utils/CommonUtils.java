@@ -39,13 +39,12 @@ public class CommonUtils {
                 profile.setPreference("dom.max_chrome_script_run_time", 1000);
                 profile.setPreference("dom.max_script_run_time", 1000);
                 profile.setPreference("browser.cache.disk.enable", false);
-                profile.setPreference("webdriver.firefox.driver", System.getProperty("user.dir") + "\\resources\\driver\\chromedriver.exe");
                 capability.setCapability(FirefoxDriver.PROFILE, profile);
                 driver = new FirefoxDriver(capability);
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\resources\\driver\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/resources/driver/geckodriver.exe");
                 driver = new FirefoxDriver();
             } else if (browserName.toLowerCase().equals("chrome")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\resources\\driver\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/resources/driver/chromedriver.exe");
                 capability.setJavascriptEnabled(true);
                 capability.setCapability("chrome.switches", "--start-maximized");
                 capability.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
