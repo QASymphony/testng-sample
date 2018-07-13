@@ -7,6 +7,8 @@ public class TestClassSecond {
     @BeforeTest
     public void beforeTestTestClassSecond() {
         System.out.println("TestClassSecond: before test");
+        Assert.assertEquals(true,false);
+        System.out.println("TestClassSecond: failed in beforeTestTestClassSecond");
     }
 
     @Test
