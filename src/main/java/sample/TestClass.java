@@ -18,29 +18,25 @@ public class TestClass {
 
 	@Test
 	public void unitLevel1() {
-    try        
-    {
-      System.out.println("testClass: before sleep - Unit level1 testing");
-      Thread.sleep(5000);
-      System.out.println("testClass: after sleep - Unit level1 testing");
-    } 
-    catch(InterruptedException ex) 
-    {
-      Thread.currentThread().interrupt();
-    }		
+	    try{
+	      System.out.println("testClass: before sleep - Unit level1 testing");
+	      Thread.sleep(5000);
+	      System.out.println("testClass: after sleep - Unit level1 testing");
+	    } catch(InterruptedException ex) {
+	      Thread.currentThread().interrupt();
+	    }		
 	}
 
 	@Test
 	public void unitLevel2() {
-		{
-      System.out.println("testClass: before sleep - Unit level2 testing");
-      Thread.sleep(5000);
-      System.out.println("testClass: after sleep - Unit level2 testing");
-    } 
-    catch(InterruptedException ex) 
-    {
-      Thread.currentThread().interrupt();
-    }
+		try{
+	      System.out.println("testClass: before sleep - Unit level2 testing");
+	      Thread.sleep(5000);
+	      System.out.println("testClass: after sleep - Unit level2 testing");
+	    }catch(InterruptedException ex) 
+    	{
+      		Thread.currentThread().interrupt();
+	    }
 	}
 
 	@BeforeMethod
