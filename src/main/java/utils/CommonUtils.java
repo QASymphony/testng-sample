@@ -28,53 +28,40 @@ public class CommonUtils {
     private final Logger logger = Logger.getLogger(CommonUtils.class);
     public WebDriver driver;
 
-    public WebDriver openBrowser(String browserName, String baseURL) throws Exception {
+    public WebDriver openBrowser (String browserName, String baseURL) throws Exception {
         try{
-            logger.info("Browser: " + browserName + " without remote driver");
             DesiredCapabilities capability = new DesiredCapabilities();
-            capability.setPlatform(Platform.ANY);
-            capability.setVersion(capability.getVersion());
-            capability.setJavascriptEnabled(true);
-            capability.setCapability("nativeEvents", true);
-            if (browserName.equals("FF")) {
-                logger.info("Firefox driver would be used");
+            logger.info("Browser: " + browserName + " without remote driver");
+            if (browserName.toLowerCase().equals("firefox")) {
                 capability = DesiredCapabilities.firefox();
                 capability.setBrowserName("firefox");
                 FirefoxProfile profile = new FirefoxProfile();
                 profile.setPreference("dom.max_chrome_script_run_time", 1000);
                 profile.setPreference("dom.max_script_run_time", 1000);
                 profile.setPreference("browser.cache.disk.enable", false);
-                profile.setPreference("webdriver.firefox.bin","C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+                profile.setPreference("webdriver.firefox.driver", System.getProperty("user.dir") + "\\resources\\driver\\chromedriver.exe");
                 capability.setCapability(FirefoxDriver.PROFILE, profile);
                 driver = new FirefoxDriver(capability);
-            }  else if (browserName.equals("IE")) {
-                logger.info("IE is selected");
-                capability = DesiredCapabilities.internetExplorer();
-                capability.setBrowserName("internet explorer");
-                capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
-                capability.setJavascriptEnabled(true);
-                System.setProperty("webdriver.ie.driver", "resources//driver//IEDriverServer.exe");
-                driver = new InternetExplorerDriver(capability);
-                driver.manage().deleteAllCookies();
-            } else if (browserName.equals("CH")){
-                logger.info("Google chrome is selected");
+                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\resources\\driver\\geckodriver.exe");
+                driver = new FirefoxDriver();
+            } else if (browserName.toLowerCase().equals("chrome")) {
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\resources\\driver\\chromedriver.exe");
                 capability.setJavascriptEnabled(true);
                 capability.setCapability("chrome.switches", "--start-maximized");
                 capability.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
-                System.setProperty("webdriver.chrome.driver", "resources//driver//chromedriver.exe");
                 capability = DesiredCapabilities.chrome();
                 capability.setBrowserName("chrome");
                 driver = new ChromeDriver(capability);
             }
-            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             logger.info("Driver setup is starting ......");
-//            driver.get(baseURL);
-            driver.navigate().to(baseURL);
-            driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
-            driver.manage().timeouts().setScriptTimeout(180, TimeUnit.SECONDS);
+            driver.manage().window().maximize();
+            driver.manage().deleteAllCookies();
+            driver.get(baseURL);
         }
         catch (Exception e){
-            logger.error("Error: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
         }
         return driver;
     }

@@ -10,12 +10,6 @@
             <class name="sample.DataProviderTest" />
         </classes>
     </test>
-    <test name="testOpenBrowserOnChrome">
-        <parameter name="browserName" value="CH" />
-        <classes>
-            <class name="sample.OpenBrowser" />
-        </classes>
-    </test>
     <test name="testCaculate">
         <classes>
             <class name="sample.CalculatorTestSuccessful" />
@@ -24,6 +18,21 @@
     <test name="testMessagePrintout">
         <classes>
             <class name="sample.WelcomeMessageTest" />
+        </classes>
+    </test>
+    <test name="TestClass">
+        <classes>
+            <class name="sample.TestClass" />
+        </classes>
+    </test>
+    <test name="TestClassSecond">
+        <classes>
+            <class name="sample.TestClassSecond" />
+        </classes>
+    </test>
+    <test name="testOpenBrowserOnChrome">
+        <classes>
+            <class name="sample.OpenBrowser" />
         </classes>
     </test>
 </suite>

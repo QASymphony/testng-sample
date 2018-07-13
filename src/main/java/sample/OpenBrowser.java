@@ -18,16 +18,15 @@ public class OpenBrowser {
     private WebDriver driver;
 
     @Test
-    @Parameters({ "browserName" })
-    public void testURLs(String browserName) throws Exception{
+    public void openBrowserWithUrl() throws Exception{
         try{
+            String browserName = "Chrome";
             System.out.println("Open browser " + browserName);
-            logger.info("Open browser " + browserName);
             ArrayList<String> listURLs = commonUtils.getListURLs();
             for(int i=0; i<listURLs.size(); i++){
-                System.out.println("Open url:  " + listURLs.get(i) + " on browser " + browserName);
-                logger.info("Open url:  " + listURLs.get(i) + " on browser " + browserName);
+                System.out.println("Access url:  " + listURLs.get(i) + " on browser " + browserName);
                 driver = commonUtils.openBrowser(browserName, listURLs.get(i));
+                System.out.println(driver.toString());
                 Thread.sleep(3000L);
                 System.out.println("Closing browser now .........");
                 logger.info("Quit ....");

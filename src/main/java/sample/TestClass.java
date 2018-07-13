@@ -1,5 +1,6 @@
 package sample;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -12,15 +13,16 @@ import org.testng.annotations.Test;
 public class TestClass {
 
 	@BeforeTest
-	public void beforeTest() {
+	public void beforeTestTestClass() {
 		System.out.println("testClass: before test");
 	}
 
 	@Test
-	public void unitLevel1() {
+	public void unitLevel1TestClass() {
 	    try{
 	      System.out.println("testClass: before sleep - Unit level1 testing");
 	      Thread.sleep(5000);
+            Assert.assertEquals(true,true);
 	      System.out.println("testClass: after sleep - Unit level1 testing");
 	    } catch(InterruptedException ex) {
 	      Thread.currentThread().interrupt();
@@ -28,10 +30,11 @@ public class TestClass {
 	}
 
 	@Test
-	public void unitLevel2() {
+	public void unitLevel2TestClass() {
 		try{
 	      System.out.println("testClass: before sleep - Unit level2 testing");
 	      Thread.sleep(5000);
+            Assert.assertEquals(false,false);
 	      System.out.println("testClass: after sleep - Unit level2 testing");
 	    }catch(InterruptedException ex) 
     	{
@@ -40,7 +43,7 @@ public class TestClass {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethodTestClass() {
 		System.out.println("testClass: before method");
 	}
 
@@ -51,27 +54,28 @@ public class TestClass {
 
 	@Parameters({ "param" })
 	@BeforeMethod
-	public void beforeMethodWithParam(String p) {
-		System.out.println("testClass: before method with param " + p);
+	public void beforeMethodWithParamTestClass() {
+        String p = "I am beforeMethod";
+        System.out.println("testClass: before method with param " + p);
 	}
 
 	@AfterMethod
-	public void afterMethod() {
+	public void afterMethodTestClass() {
 		System.out.println("testClass: after method");
 	}
 
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClassTestClass() {
 		System.out.println("testClass: before class");
 	}
 
 	@AfterClass
-	public void afterClass() {
+	public void afterClassTestClass() {
 		System.out.println("testClass: after class");
 	}
 
 	@AfterTest
-	public void afterTest() {
+	public void afterTestTestClass() {
 		System.out.println("testClass: after test");
 	}
 }
