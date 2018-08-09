@@ -68,5 +68,19 @@
             <xmlfileset dir="${basedir}" includes="${testng.xml.file}"/>
         </testng>
     </target>
+	<target name="run_automation" depends="compile">
+		<!-- <antcall target="liux_copyrun">
+		</antcall> -->
+		<antcall target="windows.first.run">
+		</antcall>
+	</target>
+    <target name="windows.first.run">
+		<!-- windows first run -->
+		<exec executable="cmd.exe">
+			<arg
+				line="/c cd D:\QAS\testng-sample &amp;&amp; java -classpath .\resources\libs\*;.;D:\agentctl-2.1.1\build\qautomation\lib\testng-plugin-log-collector.jar;.\target\classes\ org.testng.TestNG ${testngXML}" />
+		</exec>
+
+	</target>
 
 </project>
