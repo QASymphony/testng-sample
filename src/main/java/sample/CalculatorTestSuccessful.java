@@ -30,7 +30,7 @@ public class CalculatorTestSuccessful {
         System.out.println("This is executed after each Test");
     }
 
-    @Test
+    @Test(enabled = false)
     public void testSum() {
         System.out.println("----- START OF Verify function testSum in CalculatorTestSuccessful class -------------");
         int result = calculator.sum(3, 9);
