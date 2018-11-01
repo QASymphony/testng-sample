@@ -4,10 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <suiteXmlFile>testNgSuite.xml</suiteXmlFile>
-    </properties>
-
     <groupId>OpenURL</groupId>
     <artifactId>OpenURL</artifactId>
     <version>1.0</version>
@@ -24,11 +20,6 @@
             <artifactId>guice</artifactId>
             <version>3.0</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.uncommons</groupId>
-            <artifactId>reportng</artifactId>
-            <version>1.1.4</version>
         </dependency>
         <!--End Testing-->
         <!-- Selenium Drivers (all the desired browser drivers here) -->
@@ -74,11 +65,6 @@
             <version>1.2.17</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.18.1</version>
-        </dependency>
-        <dependency>
             <groupId>net.sourceforge.jexcelapi</groupId>
             <artifactId>jxl</artifactId>
             <version>2.6.12</version>
@@ -94,22 +80,9 @@
             <artifactId>jackson-core</artifactId>
             <version>2.2.2</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.qas.qtest.api</groupId>-->
-            <!--<artifactId>qtest-sdk-java</artifactId>-->
-            <!--<version>1.1.0</version>-->
-            <!--<scope>system</scope>-->
-            <!--<systemPath>${project.basedir}/resources/libs/qtest-sdk-java-1.1.0.jar</systemPath>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.qas.qtest.agent</groupId>-->
-            <!--<artifactId>qtest-testng-agent</artifactId>-->
-            <!--<version>1.0.0</version>-->
-            <!--<scope>system</scope>-->
-            <!--<systemPath>${project.basedir}/resources/libs/qtest-testng-agent-1.0.0.jar</systemPath>-->
-        <!--</dependency>-->
     </dependencies>
 
+    <!-- Configure maven surefire plugin for qtest testng-plugin-log-collector to listen the tests-->
     <build>
         <plugins>
             <plugin>
@@ -117,24 +90,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
-                    <!--<forkCount>1</forkCount>-->
-                    <!--<reuseForks>false</reuseForks>-->
-                    <!--<parallel>classes</parallel>-->
-                    <!--<threadCount>10</threadCount>-->
-                    <!--<useUnlimitedThreads>true</useUnlimitedThreads>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>testNgSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value> <!-- ,com.qas.qtest.agent.testng.listener.TestCaseListener -->
-                        </property>
-                    </properties>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
@@ -142,11 +100,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <encoding>iso-8859-1</encoding>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
+    <!-- End configuration -->
 </project>
