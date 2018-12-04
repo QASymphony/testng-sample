@@ -1,8 +1,5 @@
-package sample;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utils.CommonUtils;
 

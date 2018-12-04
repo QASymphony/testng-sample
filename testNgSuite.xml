@@ -2,37 +2,37 @@
 <suite name="TS-7 April-07-2014">
     <test name="testFactory">
         <classes>
-            <class name="sample.FactoryTest" />
+            <class name="FactoryTest" />
         </classes>
     </test>
     <test name="testDataProvider">
         <classes>
-            <class name="sample.DataProviderTest" />
+            <class name="DataProviderTest" />
         </classes>
     </test>
     <test name="testCaculate">
         <classes>
-            <class name="sample.CalculatorTestSuccessful" />
+            <class name="CalculatorTestSuccessful" />
         </classes>
     </test>
     <test name="testMessagePrintout">
         <classes>
-            <class name="sample.WelcomeMessageTest" />
+            <class name="WelcomeMessageTest" />
         </classes>
     </test>
     <test name="TestClass">        
         <classes>
-            <class name="sample.TestClass" />
+            <class name="TestClass" />
         </classes>
     </test>
     <test name="TestClassSecond">
         <classes>
-            <class name="sample.TestClassSecond" />
+            <class name="TestClassSecond" />
         </classes>
     </test>
     <test name="testOpenBrowserOnChrome">
         <classes>
-            <class name="sample.OpenBrowser" />
+            <class name="OpenBrowser" />
         </classes>
     </test>
 </suite>

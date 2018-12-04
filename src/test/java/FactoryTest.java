@@ -1,5 +1,3 @@
-package sample;
-
 import org.testng.annotations.Factory;
 
 /**
