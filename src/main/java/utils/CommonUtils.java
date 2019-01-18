@@ -28,32 +28,39 @@ public class CommonUtils {
     private final Logger logger = Logger.getLogger(CommonUtils.class);
     public WebDriver driver;
 
-    public WebDriver openBrowser (String browserName, String baseURL) throws Exception {
+    private String getChromeDriverPath() {
+        String osName =  System.getProperty("os.name").toLowerCase();
+        if (osName.contains("win")) {
+            return "/resources/drivers/windows/chromedriver.exe";
+        }
+        if (osName.contains("mac")){
+            return "/resources/drivers/mac/chromedriver";
+        }
+        return "/resources/drivers/linux/chromedriver";
+    }
+
+    private void setExecutableMode(String path) {
+        final File file = new File(path);
+        file.setReadable(true, false);
+        file.setExecutable(true, false);
+        file.setWritable(true, false);
+    }
+
+    public WebDriver openChromeBrowser (String baseURL) {
+        WebDriver driver = null;
         try{
+            String chromeDriverPath = System.getProperty("user.dir") + getChromeDriverPath();
+            setExecutableMode(chromeDriverPath);
+            System.out.println("---- Opening chrome browser");
             DesiredCapabilities capability = new DesiredCapabilities();
-            logger.info("Browser: " + browserName + " without remote driver");
-            if (browserName.toLowerCase().equals("firefox")) {
-                capability = DesiredCapabilities.firefox();
-                capability.setBrowserName("firefox");
-                FirefoxProfile profile = new FirefoxProfile();
-                profile.setPreference("dom.max_chrome_script_run_time", 1000);
-                profile.setPreference("dom.max_script_run_time", 1000);
-                profile.setPreference("browser.cache.disk.enable", false);
-                capability.setCapability(FirefoxDriver.PROFILE, profile);
-                driver = new FirefoxDriver(capability);
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/resources/driver/geckodriver.exe");
-                driver = new FirefoxDriver();
-            } else if (browserName.toLowerCase().equals("chrome")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/resources/driver/chromedriver.exe");
-                capability.setJavascriptEnabled(true);
-                capability.setCapability("chrome.switches", "--start-maximized");
-                capability.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
-                capability = DesiredCapabilities.chrome();
-                capability.setBrowserName("chrome");
-                driver = new ChromeDriver(capability);
-            }
+            System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+            capability.setJavascriptEnabled(true);
+            capability.setCapability("chrome.switches", "--start-maximized");
+            capability.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
+            capability = DesiredCapabilities.chrome();
+            capability.setBrowserName("chrome");
+            driver = new ChromeDriver(capability);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            logger.info("Driver setup is starting ......");
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
             driver.get(baseURL);

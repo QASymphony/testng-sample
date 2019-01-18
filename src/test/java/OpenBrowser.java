@@ -2,8 +2,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import utils.CommonUtils;
-
-import java.util.ArrayList;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 /**
  * Created by duongnapham on 2/12/15.
@@ -15,20 +15,18 @@ public class OpenBrowser {
     private WebDriver driver;
 
     @Test
-    public void openBrowserWithUrl() throws Exception{
+    public void openBrowserWithUrl(){
         try{
-            String browserName = "Chrome";
-            System.out.println("Open browser " + browserName);
-            ArrayList<String> listURLs = commonUtils.getListURLs();
-            for(int i=0; i<listURLs.size(); i++){
-                System.out.println("Access url:  " + listURLs.get(i) + " on browser " + browserName);
-                driver = commonUtils.openBrowser(browserName, listURLs.get(i));
-                System.out.println(driver.toString());
-                Thread.sleep(3000L);
-                System.out.println("Closing browser now .........");
-                logger.info("Quit ....");
-                driver.quit();
-            }
+            driver = commonUtils.openChromeBrowser("https://www.qasymphony.com");
+            WebElement searchIconElement = driver.findElement(By.xpath("/html/body/div[2]/header/div/div[2]/div/nav/ul/li[9]/a"));
+            searchIconElement.click();
+            WebElement searchInputElement = driver.findElement(By.id("input-search"));
+
+            searchInputElement.sendKeys("qTest Launch");
+            searchInputElement.submit();
+            System.out.println("Closing browser now .........");
+            logger.info("Quit ....");
+            driver.quit();
         }
         catch (Exception e){
             logger.error("testURLs: " + e.getMessage());
